@@ -1,0 +1,5 @@
+.maindiv1 {
+  color: aliceblue;
+  display: grid;
+  grid-template-columns: 270px auto 50px;
+}

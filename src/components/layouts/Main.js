@@ -5,8 +5,7 @@ import SideIcons from "./SideIcons";
 
 function Main() {
   return (
-    <div className="maindiv1">
-      <Compose />
+    <div className="div1">
       <Sidebar />
       <EmailsView />
       <SideIcons />

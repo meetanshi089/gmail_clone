@@ -1,0 +1,20 @@
+.sbdiv1 {
+  border-right: 1px solid lightgray;
+  height: 100vh;
+}
+.sbdiv2 {
+  display: grid;
+  place-items: start;
+  padding: 10px 20px;
+}
+.sidebar-button-item {
+  display: grid;
+  grid-template-columns: 5% auto;
+  color: gray;
+  padding: 5px 25px;
+  border-radius: 0 100px 100px 0;
+  cursor: pointer;
+}
+.sidebar-button-item :hover {
+  background-color: #f5f7f7;
+}

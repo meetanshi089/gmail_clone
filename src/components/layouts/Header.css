@@ -6,6 +6,7 @@
   border-bottom: 1px solid #ddd;
   background-color: white;
   flex-wrap: wrap;
+  height: 70px;
 }
 .header-left {
   display: flex;

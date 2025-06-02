@@ -8,6 +8,7 @@
   border-right: 4px solid gray;
   background-color: white;
   padding-top: 10px;
+  box-sizing: border-box;
 }
 .bottomwrap {
   margin-bottom: 10px;

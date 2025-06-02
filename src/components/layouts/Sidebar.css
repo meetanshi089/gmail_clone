@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100vh - 70px);
+  height: 100vh;
   width: 260px;
   min-width: 200px;
   border-right: 4px solid gray;
@@ -29,11 +29,14 @@
   display: flex;
   align-items: center;
   color: gray;
-  padding: 8px 20px;
+  padding: 5px 25px;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
   margin-right: 4px;
+  margin-left: 6px;
   transition: background-color 0.3s ease;
+  gap: 10px;
+  height: 30px;
 }
 .sidebar-button-item:hover {
   background-color: #f5f7f7;
@@ -45,13 +48,14 @@
 .sbsection {
   border-top: 1px solid lightgray;
   padding: 8px 0;
+  margin-left: 6px;
 }
 .sbsection p {
   color: gray;
   display: flex;
   align-items: center;
   height: 30px;
-  padding-left: 25px;
+  padding: 5px 25px;
   gap: 10px;
   cursor: pointer;
 }
@@ -60,10 +64,9 @@
   border-radius: 100px 100px 100px 100px;
 }
 .sbsection h4 {
-  padding-left: 25px;
+  padding: 5px 25px;
   margin-bottom: 4px;
   margin-top: 8px;
-  font-size: 14px;
   font-weight: 500;
   color: #333;
 }
@@ -73,4 +76,10 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 10px;
+  border-top: 1px solid lightgray;
+}
+.MuiSvgIcon-root {
+  color: #5f6368;
+  padding: 2px;
+  cursor: pointer;
 }

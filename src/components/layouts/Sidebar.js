@@ -48,7 +48,7 @@ function Sidebar() {
             Meetanshi
           </p>
         </div>
-        <div className="sbdicons">
+        <div className="sbicons">
           {BottomIcons.map((icon, index) => (
             <span key={index}>{icon}</span>
           ))}

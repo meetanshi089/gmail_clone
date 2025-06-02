@@ -3,7 +3,7 @@ import "./EmailsView.css";
 function EmailsView() {
   return (
     <div>
-      <p>Emails</p>
+      <p>Emails hegjhghjwbejbasdhb</p>
     </div>
   );
 }

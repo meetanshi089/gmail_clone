@@ -3,7 +3,7 @@
 }
 .div2 {
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 750px 1fr auto;
   align-items: center;
   gap: 16px;
   padding: 8px 16px;
@@ -16,7 +16,7 @@
   align-items: center;
   gap: 8px;
   background-color: #f1f3f4;
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: 8px;
   max-width: 750px;
 }
@@ -24,7 +24,7 @@
   border: none;
   background: transparent;
   outline: none;
-  width: 100%;
+  width: auto;
 }
 .div4 {
   display: grid;
@@ -36,7 +36,7 @@
 .resized-img {
   width: 100px;
   height: auto;
-  display: flex;
+  display: grid;
 }
 .MuiSvgIcon-root {
   color: #5f6368;

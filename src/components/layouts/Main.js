@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import EmailsView from "./EmailsView";
 import SideIcons from "./SideIcons";
+import "./Main.css";
 
 function Main() {
   return (

@@ -1,7 +1,17 @@
 .sbdiv1 {
-  border-right: 1px solid lightgray;
-  height: 100vh;
+  border-right: 4px solid gray;
+  height: calc(100vh-70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+.bottomwrap {
+  margin-bottom: 10px;
+}
+.topsectwrap {
+  justify-content: ;
+}
+
 .sbdiv2 {
   display: grid;
   place-items: start;
@@ -9,13 +19,34 @@
 }
 .sidebar-button-item {
   display: grid;
-  grid-template-columns: 5% auto;
+  grid-template-columns: 12% auto;
   color: gray;
-  padding: 5px 25px;
+  padding: 6px 25px;
   border-radius: 0 100px 100px 0;
   cursor: pointer;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .sidebar-button-item :hover {
   background-color: #f5f7f7;
+}
+
+.sbdiv4 {
+  border-top: 1px solid lightgray;
+}
+.sbdiv4 p {
+  color: gray;
+  display: grid;
+  grid-template-columns: 14% auto;
+  height: 30px;
+  align-items: center;
+  padding-left: 25px;
+}
+h4 {
+  padding-left: 25px;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+.sbdiv6 {
+  display: flex;
+  justify-content: center;
 }

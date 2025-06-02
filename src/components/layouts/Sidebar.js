@@ -10,19 +10,19 @@ function SidebarButtonItem({ icon, text }) {
   return (
     <div className="sidebar-button-item">
       {icon}
-      <span style={{ marginLeft: "10px" }}>{text}</span>
+      <span>{text}</span>
     </div>
   );
 }
 function Sidebar() {
   return (
     <div className="sbdiv1">
-      <div>
-        <div className="sbdiv2">
+      <div className="topsectwrap">
+        <div className="sbcompose">
           <Compose />
         </div>
 
-        <div className="sbdiv3">
+        <div className="sbbuttons">
           {sidebarbuttonitems.map((item, index) => (
             <SidebarButtonItem key={index} icon={item.icon} text={item.text} />
           ))}
@@ -30,7 +30,7 @@ function Sidebar() {
       </div>
 
       <div className="bottomwrap">
-        <div className="sbdiv4">
+        <div className="sbsection">
           <h4>Meet</h4>
           <p>
             <VideocamIcon />
@@ -41,20 +41,18 @@ function Sidebar() {
             Join Meeting
           </p>
         </div>
-        <div className="sbdiv4">
+        <div className="sbsection">
           <h4>Hangouts</h4>
           <p>
             <AccountCircleIcon />
             Meetanshi
           </p>
         </div>
-        <div className="sbdiv6">
+        <div className="sbdicons">
           {BottomIcons.map((icon, index) => (
             <span key={index}>{icon}</span>
           ))}
         </div>
-        <div className="sbdiv7"></div>
-        <div className="sbdiv8"></div>
       </div>
     </div>
   );

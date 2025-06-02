@@ -1,43 +1,47 @@
-.div1 {
-  background-color: white;
-}
-.div2 {
-  display: grid;
-  grid-template-columns: auto 750px 1fr auto;
+.Header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
   padding: 8px 16px;
   border-bottom: 1px solid #ddd;
+  background-color: white;
+  flex-wrap: wrap;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-.div3 {
-  display: grid;
-  grid-template-columns: 10% auto 7%;
+.header-search {
+  display: flex;
   align-items: center;
-  gap: 8px;
+  flex: 1;
+  max-width: 720px;
   background-color: #f1f3f4;
   padding: 4px 12px;
+  margin: 8px 16px;
   border-radius: 8px;
-  max-width: 750px;
+  gap: 8px;
 }
-.div3 input {
+.header-search input {
   border: none;
   background: transparent;
   outline: none;
-  width: auto;
+  width: 100%;
+  font-size: 14px;
 }
-.div4 {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+.header-right {
+  display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.resized-img {
+.header-logo {
   width: 100px;
   height: auto;
-  display: grid;
 }
 .MuiSvgIcon-root {
   color: #5f6368;
+  cursor: pointer;
 }

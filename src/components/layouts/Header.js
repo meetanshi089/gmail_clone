@@ -10,24 +10,25 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div className="div1">
-      <div className="div2">
+    <div className="Header">
+      <div className="header-left">
         <MenuIcon style={{ color: "#5f6368" }} />
         <img
           src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/21939811/newgmaillogo.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200"
-          className="resized-img"
+          alt="Gmail Logo"
+          className="header-logo"
         />
-        <div className="div3">
-          <SearchIcon style={{ color: "#5f6368" }} />
-          <input type="text" placeholder="Search Mail"></input>
-          <ExpandMoreIcon style={{ color: "#5f6368" }} />
-        </div>
-        <div className="div4">
-          <HelpOutlineIcon style={{ color: "#5f6368" }} />
-          <SettingsIcon style={{ color: "#5f6368" }} />
-          <AppsIcon style={{ color: "#5f6368" }} />
-          <AccountCircleIcon style={{ color: "#5f6368" }} />
-        </div>
+      </div>
+      <div className="header-search">
+        <SearchIcon style={{ color: "#5f6368" }} />
+        <input type="text" placeholder="Search Mail"></input>
+        <ExpandMoreIcon style={{ color: "#5f6368" }} />
+      </div>
+      <div className="header-right">
+        <HelpOutlineIcon style={{ color: "#5f6368" }} />
+        <SettingsIcon style={{ color: "#5f6368" }} />
+        <AppsIcon style={{ color: "#5f6368" }} />
+        <AccountCircleIcon style={{ color: "#5f6368" }} />
       </div>
     </div>
   );

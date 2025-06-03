@@ -1,5 +1,7 @@
 .emailview {
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .topicons {
@@ -7,8 +9,16 @@
   align-items: center;
   gap: 12px;
   padding: 8px 16px;
+  border-bottom: 1px solid lightgray;
 }
- {
-  /*.emailcontainer {
-}*/
+
+.emailcontainer {
+  flex: 1; /* takes the remaining space */
+  overflow-y: auto;
+}
+.emailcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 2;
 }

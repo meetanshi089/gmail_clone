@@ -6,6 +6,9 @@ import Checkbox from "@mui/material/Checkbox";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { IconButton } from "@mui/material";
+import { Emaildata } from "../../temp/Emaildata";
+import EmailItem from "../Emailitem/EmailItem";
+import { ReadMoreSharp } from "@mui/icons-material";
 function EmailsView() {
   return (
     <div className="emailview">
@@ -22,7 +25,21 @@ function EmailsView() {
           <MoreVertIcon />
         </IconButton>
       </div>
-      <div className="emailcontainer"></div>
+      <div className="emailcontainer">
+        {Emaildata.map(
+          ({ starred, from, subject, message, received, read }, index) => (
+            <EmailItem
+              key={index}
+              starred={starred}
+              from={from}
+              subject={subject}
+              message={message}
+              received={received}
+              read={read}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 }

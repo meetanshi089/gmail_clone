@@ -1,3 +1,4 @@
+// ComposeEmail.js
 import React, { useState } from "react";
 import {
   Dialog,
@@ -10,50 +11,51 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import "./ComposeEmail.css";
-function ComposeEmail({ open, handleClose, onSend }) {
+
+function ComposeEmail({ open, handleClose }) {
   const [form, setForm] = useState({ to: "", subject: "", body: "" });
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (form.to && form.subject) {
-      onSend({
-        sender: form.to,
-        subject: form.subject,
-        body: form.body,
-      });
-      setForm({ to: "", subject: "", body: "" });
-      handleClose();
+      try {
+        const response = await fetch("http://localhost:5000/api/email/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            sender: "your@email.com", // or logged-in user
+            recipient: form.to,
+            subject: form.subject,
+            body: form.body,
+          }),
+        });
+
+        if (response.ok) {
+          console.log("Email sent!");
+          setForm({ to: "", subject: "", body: "" });
+          handleClose();
+        } else {
+          console.error("Failed to send email");
+        }
+      } catch (err) {
+        console.error("Error:", err);
+      }
     }
   };
 
   return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      fullWidth
-      maxWidth="sm"
-      PaperProps={{
-        sx: {
-          position: "absolute",
-          bottom: 16,
-          right: 16,
-          m: 0,
-          borderRadius: 2,
-          boxShadow: 3,
-        },
-      }}
-    >
-      <DialogTitle className="compose-title">
+    <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
+      <DialogTitle>
         New Message
         <IconButton onClick={handleClose}>
           <CloseIcon />
         </IconButton>
       </DialogTitle>
 
-      <DialogContent className="compose-content" dividers>
+      <DialogContent dividers>
         <TextField
           label="To"
           name="to"
@@ -85,7 +87,7 @@ function ComposeEmail({ open, handleClose, onSend }) {
         />
       </DialogContent>
 
-      <DialogActions className="compose-actions">
+      <DialogActions>
         <Button variant="contained" onClick={handleSubmit}>
           Send
         </Button>

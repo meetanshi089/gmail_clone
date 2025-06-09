@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const emailRoutes = require("./routes/emailRoutes");
+
 const app = express();
 app.use(cors());
 app.use(express.json());

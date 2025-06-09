@@ -1,4 +1,3 @@
-// ComposeEmail.js
 import React, { useState } from "react";
 import {
   Dialog,
@@ -49,7 +48,7 @@ function ComposeEmail({ open, handleClose }) {
   return (
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="sm">
       <DialogTitle>
-        New Message
+        New Mail
         <IconButton onClick={handleClose}>
           <CloseIcon />
         </IconButton>
@@ -65,6 +64,25 @@ function ComposeEmail({ open, handleClose }) {
           variant="standard"
           margin="dense"
         />
+        <TextField
+          label="cc"
+          name="cc"
+          value={form.cc}
+          onChange={handleChange}
+          fullWidth
+          variant="standard"
+          margin="dense"
+        />
+        <TextField
+          label="bcc"
+          name="bcc"
+          value={form.bcc}
+          onChange={handleChange}
+          fullWidth
+          variant="standard"
+          margin="dense"
+        />
+
         <TextField
           label="Subject"
           name="subject"
@@ -88,7 +106,7 @@ function ComposeEmail({ open, handleClose }) {
       </DialogContent>
 
       <DialogActions>
-        <Button variant="contained" onClick={handleSubmit}>
+        <Button varianct="contained" onClick={handleSubmit}>
           Send
         </Button>
       </DialogActions>

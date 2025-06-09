@@ -14,12 +14,12 @@ function SidebarButtonItem({ icon, text }) {
     </div>
   );
 }
-function Sidebar() {
+function Sidebar({ onComposeClick }) {
   return (
     <div className="sbdiv1">
       <div className="topsectwrap">
         <div className="sbcompose">
-          <Compose />
+          <Compose onClick={onComposeClick} />
         </div>
 
         <div className="sbbuttons">

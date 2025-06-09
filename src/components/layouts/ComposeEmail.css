@@ -1,0 +1,20 @@
+.compose-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f1f3f4;
+  font-weight: 500;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.compose-content {
+  padding: 16px;
+  background-color: white;
+}
+
+.compose-actions {
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+}

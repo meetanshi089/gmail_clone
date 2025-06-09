@@ -18,7 +18,7 @@ export const Emaildata = [
   {
     starred: false,
     from: "Anvi",
-    subject: "yoo",
+    subject: "hii",
     message: "wasupp",
     received: "08:40",
     read: "false",

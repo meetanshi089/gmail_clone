@@ -26,7 +26,7 @@ function ComposeEmail({ open, handleClose }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            sender: "your@email.com", // or logged-in user
+            sender: "meetanshi987@email.com",
             recipient: form.to,
             subject: form.subject,
             body: form.body,

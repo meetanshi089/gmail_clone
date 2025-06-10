@@ -20,7 +20,6 @@ function Starredview() {
               message={email.message}
               received={email.received}
               read={email.read}
-              //onToggleStar={toggleStar}
             />
           ))
         )}

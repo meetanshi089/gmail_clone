@@ -30,7 +30,7 @@ const EmailItem = ({
       />
       <IconButton onClick={toggleStar}>
         {starred ? (
-          <StarIcon style={{ color: "#fbc02d" }} /> // yellow star
+          <StarIcon style={{ color: "#fbc02d" }} />
         ) : (
           <StarBorderIcon />
         )}

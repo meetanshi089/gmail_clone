@@ -22,7 +22,6 @@ function SnoozedView() {
               message={email.message}
               received={email.received}
               read={email.read}
-              //onToggleStar={toggleStar}
             />
           ))
         )}

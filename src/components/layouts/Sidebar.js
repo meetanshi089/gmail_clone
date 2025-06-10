@@ -15,9 +15,9 @@ function SidebarButtonItem({ icon, text, onClick }) {
   );
 }
 
-function Sidebar({ onComposeClick, onSidebarItemClick }) {
+function Sidebar({ onComposeClick, onSidebarItemClick, collapsed }) {
   return (
-    <div className="sbdiv1">
+    <div className={`sbdiv1 ${collapsed ? "collapsed" : ""}`}>
       <div className="topsectwrap">
         <div className="sbcompose">
           <Compose onClick={onComposeClick} />
@@ -25,12 +25,14 @@ function Sidebar({ onComposeClick, onSidebarItemClick }) {
 
         <div className="sbbuttons">
           {sidebarbuttonitems.map((item, index) => (
-            <SidebarButtonItem
+            <div
+              className="sidebar-button-item"
               key={index}
-              icon={item.icon}
-              text={item.text}
-              onClick={onSidebarItemClick}
-            />
+              onClick={() => onSidebarItemClick(item.text)}
+            >
+              {item.icon}
+              {!collapsed && <span>{item.text}</span>}
+            </div>
           ))}
         </div>
       </div>
@@ -40,18 +42,18 @@ function Sidebar({ onComposeClick, onSidebarItemClick }) {
           <h4>Meet</h4>
           <p>
             <VideocamIcon />
-            New Meeting
+            {!collapsed && " New Meeting"}
           </p>
           <p>
             <KeyboardIcon />
-            Join Meeting
+            {!collapsed && " Join Meeting"}
           </p>
         </div>
         <div className="sbsection">
           <h4>Hangouts</h4>
           <p>
             <AccountCircleIcon />
-            Meetanshi
+            {!collapsed && " Meetanshi"}
           </p>
         </div>
         <div className="sbicons">

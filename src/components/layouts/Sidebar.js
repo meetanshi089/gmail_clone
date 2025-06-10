@@ -6,15 +6,16 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { sidebarbuttonitems } from "../data/sidebarbuttonitems";
 import { BottomIcons } from "../data/BottomIcons";
-function SidebarButtonItem({ icon, text }) {
+function SidebarButtonItem({ icon, text, onClick }) {
   return (
-    <div className="sidebar-button-item">
+    <div className="sidebar-button-item" onClick={() => onClick(text)}>
       {icon}
       <span>{text}</span>
     </div>
   );
 }
-function Sidebar({ onComposeClick }) {
+
+function Sidebar({ onComposeClick, onSidebarItemClick }) {
   return (
     <div className="sbdiv1">
       <div className="topsectwrap">
@@ -24,7 +25,12 @@ function Sidebar({ onComposeClick }) {
 
         <div className="sbbuttons">
           {sidebarbuttonitems.map((item, index) => (
-            <SidebarButtonItem key={index} icon={item.icon} text={item.text} />
+            <SidebarButtonItem
+              key={index}
+              icon={item.icon}
+              text={item.text}
+              onClick={onSidebarItemClick}
+            />
           ))}
         </div>
       </div>

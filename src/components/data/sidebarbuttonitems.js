@@ -5,35 +5,13 @@ import SendIcon from "@mui/icons-material/Send";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import LabelIcon from "@mui/icons-material/Label";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { sendEmailVerification } from "firebase/auth/web-extension";
+
 export const sidebarbuttonitems = [
-  {
-    icon: <InboxIcon />,
-    text: "Inbox",
-  },
-  {
-    icon: <StarIcon />,
-    text: "Starred",
-  },
-  {
-    icon: <WatchLaterIcon />,
-    text: "Snoozed",
-  },
-  {
-    icon: <SendIcon />,
-    text: "Sent",
-  },
-  {
-    icon: <InsertDriveFileIcon />,
-    text: "Drafts",
-  },
-  {
-    icon: <LabelIcon />,
-    text: "Notes",
-  },
-  {
-    icon: <ExpandMoreIcon />,
-    text: "More",
-  },
+  { icon: <InboxIcon />, text: "Inbox" },
+  { icon: <StarIcon />, text: "Starred" },
+  { icon: <WatchLaterIcon />, text: "Snoozed" },
+  { icon: <SendIcon />, text: "Sent" },
+  { icon: <InsertDriveFileIcon />, text: "Drafts" },
+  { icon: <LabelIcon />, text: "Notes" },
+  { icon: <ExpandMoreIcon />, text: "More" },
 ];
-export default sidebarbuttonitems;

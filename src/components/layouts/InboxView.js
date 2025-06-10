@@ -1,5 +1,5 @@
 import React from "react";
-import "./EmailsView.css";
+
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import Checkbox from "@mui/material/Checkbox";
@@ -8,10 +8,11 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { IconButton } from "@mui/material";
 import emails from "../../temp/emails.json";
 import EmailItem from "../Emailitem/EmailItem";
+import "./EmailsView.css";
 
-function EmailsView() {
+function InboxView() {
   return (
-    <div className="emailview">
+    <div className="inbox">
       <div className="topicons">
         <Checkbox
           icon={<CheckBoxOutlineBlankIcon />}
@@ -43,4 +44,5 @@ function EmailsView() {
     </div>
   );
 }
-export default EmailsView;
+
+export default InboxView;

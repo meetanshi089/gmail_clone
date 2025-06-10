@@ -1,5 +1,4 @@
 import React from "react";
-import "./EmailsView.css";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import Checkbox from "@mui/material/Checkbox";
@@ -9,9 +8,11 @@ import { IconButton } from "@mui/material";
 import emails from "../../temp/emails.json";
 import EmailItem from "../Emailitem/EmailItem";
 
-function EmailsView() {
+function DraftsView() {
+  const draftEmails = emails.filter((emails) => emails.draft);
+
   return (
-    <div className="emailview">
+    <div className="drafts">
       <div className="topicons">
         <Checkbox
           icon={<CheckBoxOutlineBlankIcon />}
@@ -26,21 +27,26 @@ function EmailsView() {
         </IconButton>
       </div>
       <div className="emailcontainer">
-        {emails.map(
-          ({ starred, from, subject, message, received, read }, index) => (
-            <EmailItem
-              key={index}
-              starred={starred}
-              from={from}
-              subject={subject}
-              message={message}
-              received={received}
-              read={read}
-            />
+        {draftEmails.length > 0 ? (
+          draftEmails.map(
+            ({ starred, from, subject, message, received, read }, index) => (
+              <EmailItem
+                key={index}
+                starred={starred}
+                from={from}
+                subject={subject}
+                message={message}
+                received={received}
+                read={read}
+              />
+            )
           )
+        ) : (
+          <p style={{ padding: "1rem" }}>No drafts available.</p>
         )}
       </div>
     </div>
   );
 }
-export default EmailsView;
+
+export default DraftsView;

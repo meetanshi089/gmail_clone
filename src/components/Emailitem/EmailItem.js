@@ -6,9 +6,21 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 import { IconButton } from "@mui/material";
 import "./Emailitem.css";
-const EmailItem = ({ starred, from, subject, message, received, read }) => {
-  const [star, setStar] = useState(starred);
-  const changeStar = () => {};
+const EmailItem = ({
+  index,
+  starred: initialStarred,
+  from,
+  subject,
+  message,
+  received,
+  read,
+}) => {
+  const [starred, setStarred] = useState(initialStarred || false);
+
+  const toggleStar = () => {
+    setStarred((prev) => !prev);
+    console.log("Starred:", !starred);
+  };
   return (
     <div className="emailitemwrap">
       <Checkbox
@@ -16,9 +28,14 @@ const EmailItem = ({ starred, from, subject, message, received, read }) => {
         checkedIcon={<CheckBoxIcon />}
         onChange={(e) => console.log("Checked:", e.target.checked)}
       />
-      <IconButton onClick={() => (star ? setStar(false) : setStar(true))}>
-        {star ? <StarIcon htmlColor="#f7cb69" /> : <StarBorderIcon />}
+      <IconButton onClick={toggleStar}>
+        {starred ? (
+          <StarIcon style={{ color: "#fbc02d" }} /> // yellow star
+        ) : (
+          <StarBorderIcon />
+        )}
       </IconButton>
+
       <div className="emailbody">
         <p className={!read && "unread"}>{from}</p>
 

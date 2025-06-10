@@ -9,6 +9,7 @@
   background-color: white;
   padding-top: 10px;
   box-sizing: border-box;
+  overflow: auto;
 }
 .bottomwrap {
   margin-bottom: 10px;

@@ -6,14 +6,14 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { sidebarbuttonitems } from "../data/sidebarbuttonitems";
 import { BottomIcons } from "../data/BottomIcons";
-function SidebarButtonItem({ icon, text, onClick }) {
+{/*function SidebarButtonItem({ icon, text, onClick }) {
   return (
     <div className="sidebar-button-item" onClick={() => onClick(text)}>
       {icon}
       <span>{text}</span>
     </div>
   );
-}
+}*/}
 
 function Sidebar({ onComposeClick, onSidebarItemClick, collapsed }) {
   return (

@@ -4,7 +4,7 @@ import Compose from "./buttons/Compose";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { sidebarbuttonitems } from "../data/sidebarbuttonitems";
+
 import { BottomIcons } from "../data/BottomIcons";
 function SidebarButtonItem({ icon, text, onClick }) {
   return (
